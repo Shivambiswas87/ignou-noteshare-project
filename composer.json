@@ -1,0 +1,12 @@
+{
+    "name": "shivam/project-ignou",
+    "authors": [
+        {
+            "name": "shivam",
+            "email": "shivam@gmail.com"
+        }
+    ],
+    "require": {
+        "plasticbrain/php-flash-messages": "^1.0"
+    }
+}

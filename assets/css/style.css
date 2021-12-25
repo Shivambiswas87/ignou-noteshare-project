@@ -1,0 +1,342 @@
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #fccb90;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+
+
+/******************Custom CSS********************/
+
+.my-background{
+    background-color: #FFFCF2;
+}
+.my-background-dark{
+    background-color: #e6e3da ;
+}
+.my-footer {
+    background-color: #cccac2;
+}
+.my-primary-btn{
+   background-color:  #EB5E28;
+}
+.my-primary-btn:hover{
+    background-color:  #bc4b20;
+}
+.my-secondary-btn{
+    background-color: transparent;
+    border-color: #EB5E28;
+}
+
+.my-secondary-btn:hover{
+    background-color: #fbdfd4;
+    border-color: #EB5E28;
+}
+
+.pagination > li > a {
+    background-color: #fffefa;
+    color: #333230;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: floralwhite;
+    background-color: #EB5E28;
+    border-color: #a5421c;
+}
+
+.pagination > .active > a {
+    color: white;
+    background-color: #EB5E28 !Important;
+    border: solid 1px #a5421c !Important;
+}
+
+.pagination > .active > a:hover {
+    background-color : #762f14 !Important;
+    border: solid 1px #762f14 ;
+}
+
+
+
+/******************Custom CSS********************/
+
+
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh !important;
+    }
+}
+@media (min-width: 769px) {
+    .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+    }
+}
+
+
+/* Signup page Start */
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #fccb90;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+.card-registration .select-arrow {
+    top: 13px;
+}
+
+/* Signup page End */
+
+
+
+/*===========================
+  NAVBAR css
+===========================*/
+
+
+/*===== NAVBAR ONE =====*/
+.navbar-one {
+    /*background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);;*/
+    background-color: #252422;
+}
+
+.navbar-one .navbar {
+    position: relative;
+    padding: 0;
+}
+
+.navbar-one .navbar .navbar-nav .nav-item {
+    margin: 0 5px;
+    position: relative;
+}
+.navbar-one .navbar .navbar-nav .nav-item a {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    padding: 28px 15px;
+    color: white;
+    text-transform: capitalize;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 0;
+
+}
+
+
+.navbar-one .navbar .navbar-btn ul {
+    display: flex;
+}
+.navbar-one .navbar .navbar-btn ul li {
+    display: inline-block;
+    margin-right: 12px;
+}
+.navbar-one .navbar .navbar-btn ul li a {
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0;
+}
+.navbar-one .navbar .navbar-btn ul li a.primary-btn-outline {
+    border-color: #FFFCF2;
+    color: #FFFCF2;
+}
+.navbar-one .navbar .navbar-btn ul li a.primary-btn-outline:hover {
+    background-color: #FFFCF2;
+    color: #EB5E28;
+
+}
+.navbar-one .navbar .navbar-btn ul li a.primary-btn {
+    background-color: #FFFCF2;
+    color: #EB5E28;
+    border-color: #FFFCF2;
+}
+.navbar-one .navbar .navbar-btn ul li a.primary-btn:hover {
+    background-color: #b3b0a9;
+    color: #252422;
+}
+
+.sortable tr {
+    cursor: pointer;
+}
+
+/**** Navbar End ****/
+
+
+/*Cards...*/
+
+/*===========================
+  card-01 css
+===========================*/
+.single-card {
+    box-shadow: var(--shadow-1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 30px;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+.single-card:hover {
+    box-shadow: var(--shadow-4);
+}
+.single-card .card-image img {
+    width: 350px;
+    height: 300px;
+}
+.single-card .card-content {
+    padding: 16px;
+}
+.single-card .card-content .card-title {
+    margin-bottom: 0;
+}
+.single-card .card-content .card-title a {
+    color: black;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+.single-card .card-content .card-title a:hover {
+    color: var(--primary);
+}
+.single-card .card-content .text {
+    color: black;
+    margin-top: 8px;
+}
+
+
+/*Footer*/
+
+.footer-basic {
+    padding: 25px 0;
+    background-color: whitesmoke;
+    color: #4b4c4d;
+}
+
+
+
+/***** Side bar @my-account ******/
+.sidebar-container {
+    position: absolute;
+    /*width: 220px;*/
+    /*height: 100%;*/
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /*background: #1a1a1a;*/
+    color: #fff;
+}
+
+.content-container {
+    padding-top: 20px;
+}
+
+.sidebar-logo {
+    padding: 10px 15px 10px 30px;
+    font-size: 18px;
+    font-style: italic;
+    background-color: #ed6e3e;
+}
+
+.sidebar-navigation {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: relative;
+}
+
+.sidebar-navigation li {
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+}
+
+.sidebar-navigation li a {
+    padding: 10px 15px 10px 30px;
+    display: block;
+    color: #fff;
+}
+
+.sidebar-navigation li .fa {
+    margin-right: 10px;
+}
+
+
+.sidebar-navigation li a:hover,
+.sidebar-navigation li a:focus {
+    text-decoration: none;
+    outline: none;
+    background-color: #fffdf7;
+}
+/*.sidebar-navigation li a:active{*/
+/*    background-color: #ac2925;*/
+/*}*/
+
+.sidebar-navigation > li > :active > {
+    color: white;
+    background-color: #EB5E28 !Important;
+    border: solid 1px #a5421c !Important;
+}
+
+.sidebar-navigation li::before {
+    /*background-color: #2574A9;*/
+    position: absolute;
+    content: '';
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-transition: width 0.2s ease-in;
+    transition: width 0.2s ease-in;
+    width: 3px;
+    z-index: -1;
+}
+
+.sidebar-navigation li:hover::before {
+    width: 100%;
+}
+
+.sidebar-navigation .header {
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: #4c4c49;
+    padding: 10px 15px 10px 30px;
+}
+
+.sidebar-navigation .header::before {
+    background-color: transparent;
+}
+
+.content-container {
+    padding-left: 220px;
+}
+
+
+
+
+
+
+
