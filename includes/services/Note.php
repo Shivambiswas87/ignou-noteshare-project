@@ -71,6 +71,9 @@ class Note
                 }
                 else {
                     $folder  = BASE_PATH . '/uploads/notes/';
+                    if (! is_dir($folder) )
+                        mkdir ( $folder , 0775);
+
                     $fileext = strtolower(pathinfo($file, PATHINFO_EXTENSION) );
                     $notefile = rand(1000 , 1000000) .'.'.$fileext;
                     if(move_uploaded_file($_FILES['file']['tmp_name'], $folder . $notefile)) {
