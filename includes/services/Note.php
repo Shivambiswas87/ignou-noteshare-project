@@ -72,7 +72,7 @@ class Note
                 else {
                     $folder  = BASE_PATH . '/uploads/notes/';
                     if (! is_dir($folder) )
-                        mkdir ( $folder , 0775);
+                        mkdir ( $folder , 0775, true);
 
                     $fileext = strtolower(pathinfo($file, PATHINFO_EXTENSION) );
                     $notefile = rand(1000 , 1000000) .'.'.$fileext;
