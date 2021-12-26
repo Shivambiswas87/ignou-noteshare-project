@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 25, 2021 at 11:20 AM
+-- Generation Time: Dec 26, 2021 at 06:22 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.24
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `notes` (
   `question_year` varchar(255) NOT NULL,
   `question_no` varchar(255) NOT NULL,
   `userID` int(11) NOT NULL,
-  `status` varchar(255) NOT NULL,
+  `status` enum('approved','not_approved') NOT NULL DEFAULT 'not_approved',
   `file` varchar(255) NOT NULL,
   `file_uploaded_on` datetime NOT NULL,
   PRIMARY KEY (`id`)
