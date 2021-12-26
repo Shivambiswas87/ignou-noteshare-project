@@ -1,3 +1,10 @@
+<?php
+$flash = new \Plasticbrain\FlashMessages\FlashMessages();
+if (isset($_POST['upload'])) {
+    $serviceNote = \services\Note::getInstance();
+    $serviceNote->uploadeNote();
+}
+?>
 <!--    Upload Notes Text -->
     <div class="container-fluid" style="height: 150px">
         <div class="container text-center pt-4">
@@ -16,14 +23,19 @@
             <div class="row justify-content-center align-items-center ">
                 <div class="col-12 col-lg-9 col-xl-7">
                     <div class="card shadow card-registration" style="border-radius: 15px;">
-                        <div class="card-body p-4 p-md-5  ">
+                        <div class="card-body p-4 p-md-5">
 
                             <div class="row">
                                 <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 col-6 ">Notes</h3>
                                 <h3 class=" col-6 text-center fs-5 fw-light text-decoration-underline ">IGNOU</h3>
                             </div>
 
-                            <form>
+                            <form method="post" enctype="multipart/form-data">
+
+                                <input type="hidden" name="upload" value="upload" />
+                                <div class="row">
+                                    <?php echo $flash->display();?>
+                                </div>
 
                                 <!-- Program Code -->
                                 <div class="row">
@@ -31,7 +43,8 @@
 
                                         <div class="form-outline ">
                                             <label class="form-label" for="programCode">Program Code</label>
-                                            <input type="text" id="programCode" class="form-control form-control-lg" />
+                                            <input type="text" id="programCode" name="program_code"
+                                                   class="form-control form-control-lg" value="<?php echo isset($_POST['program_code'])?$_POST['program_code']:'';?>" />
                                         </div>
 
                                     </div>
@@ -41,7 +54,8 @@
 
                                         <div class="form-outline ">
                                             <label class="form-label" for="courseCode">Course Code</label>
-                                            <input type="text" id="courseCode" class="form-control form-control-lg" />
+                                            <input type="text" id="courseCode" name="course_code"
+                                                   class="form-control form-control-lg" value="<?php echo isset($_POST['course_code'])?$_POST['course_code']:'';?>" />
                                         </div>
 
                                     </div>
@@ -52,7 +66,8 @@
 
                                     <div class="form-outline ">
                                         <label class="form-label" for="semester">Semester</label>
-                                        <input type="text" id="semester" class="form-control form-control-lg" />
+                                        <input type="text" id="semester" name="semester"
+                                               class="form-control form-control-lg" value="<?php echo isset($_POST['semester'])?$_POST['semester']:'';?>" />
                                     </div>
 
                                 </div>
@@ -62,7 +77,8 @@
 
                                         <div class="form-outline ">
                                             <label class="form-label" for="question">Question</label>
-                                            <input type="text" id="question" class="form-control form-control-lg" />
+                                            <input type="text" id="question" name="question"
+                                                   class="form-control form-control-lg" value="<?php echo isset($_POST['question'])?$_POST['question']:'';?>" />
                                         </div>
 
                                 </div>
@@ -74,7 +90,8 @@
 
                                         <div class="form-outline">
                                             <label class="form-label" for="firstName">Question Year</label>
-                                            <input type="text" id="firstName" class="form-control form-control-lg" />
+                                            <input type="text" id="firstName" name="question_year"
+                                                   class="form-control form-control-lg" value="<?php echo isset($_POST['question_year'])?$_POST['question_year']:'';?>" />
                                         </div>
 
                                     </div>
@@ -82,7 +99,8 @@
 
                                         <div class="form-outline">
                                             <label class="form-label" for="lastName">Question No</label>
-                                            <input type="text" id="lastName" class="form-control form-control-lg" />
+                                            <input type="text" id="lastName" name="question_no"
+                                                   class="form-control form-control-lg" value="<?php echo isset($_POST['question_no'])?$_POST['question_no']:'';?>" />
                                         </div>
 
                                     </div>
@@ -93,7 +111,7 @@
                                         </div>
                                         <div class="custom-file ">
                                             <input type="file" class="custom-file-input " id="inputGroupFile01"
-                                                   aria-describedby="inputGroupFileAddon01">
+                                                   aria-describedby="inputGroupFileAddon01" name="file">
                                             <label class="custom-file-label my-secondary-btn " for="inputGroupFile01">Choose file</label>
                                         </div>
                                     </div>

@@ -14,7 +14,6 @@ $isLoggedIn = $serviceUser->isLoggedIn();
     <link rel="stylesheet" href="<?php echo \utils\Url::getAssetUrl('css/style.css');?>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-    <!--  <link rel="stylesheet" href="./pagetheme.css">-->
     <title>Index</title>
 </head>
 <body>

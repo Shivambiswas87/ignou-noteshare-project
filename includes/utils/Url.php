@@ -35,6 +35,17 @@ class Url
         echo "<a href='$link'>$title</a>";
 
     }
+    static function getCurrentUrl($removeQueryStrings = false){
+        $url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s" : "") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+        if($removeQueryStrings){
+            $url_parts = parse_url($url);
+            $url = $url_parts['scheme'] . '://' . $url_parts['host'] . $url_parts['path'];
+
+        }
+
+        return $url;
+    }
 
     static function getAssetUrl($assetPath){
 

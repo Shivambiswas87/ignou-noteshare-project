@@ -224,4 +224,12 @@ VALUES ('$username' , '$firstname', '$lastname', '$email', '$password' , '$role'
 
     }
 
+    function isAdmin(){
+
+        $data = $this->getLoggedInUserSession();
+        if(!empty($data) && ($data['role'] == 'admin'))
+            return true;
+        return false;
+
+    }
 }

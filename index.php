@@ -31,6 +31,7 @@ if(strpos($path, DASHBOARD_URL_SLUG) === 0){
 
         case 'my-notes':
         case 'my-downloads':
+        case 'all-notes':
 
             \utils\Layout::generateDashboardPage($path);
 
@@ -64,6 +65,7 @@ else{
         case 'about-me':
         case 'synopsis':
         case 'view-notes':
+        case 'read-note':
 
             \utils\Layout::generatePage($path);
 
