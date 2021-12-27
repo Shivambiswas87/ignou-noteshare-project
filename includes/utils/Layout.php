@@ -139,4 +139,7 @@ class Layout
 
     }
 
+    static function show_404_page(){
+        \utils\Layout::generatePage('404');
+    }
 }

@@ -50,7 +50,7 @@ if(strpos($path, DASHBOARD_URL_SLUG) === 0){
             \utils\Url::redirect(\utils\Url::generateLink());
             break;
         default:
-            show_404_page();
+            \utils\Layout::show_404_page();
             break;
     }
 
@@ -80,7 +80,7 @@ else{
             break;
 
         default:
-            show_404_page();
+            \utils\Layout::show_404_page();
 
     }
 
@@ -95,7 +95,4 @@ function autoload_class($className){
 
     if(file_exists($class))
         include($class);
-}
-function show_404_page(){
-    \utils\Layout::generatePage('404');
 }

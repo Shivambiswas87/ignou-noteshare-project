@@ -7,13 +7,14 @@
         <li>
         <?php if(\services\User::getInstance()->isAdmin()){?>
             <a href="<?php echo \utils\Url::generateLink('all-notes', true);?>" class="text-dark pt-4">
-                <i class="fa fa-globe" aria-hidden="true"></i> All Notes
+                <i class="fa fa-globe" aria-hidden="true"></i> All Users Notes
             </a>
-        <?php }else{?>
+        <?php }?>
+
             <a href="<?php echo \utils\Url::generateLink('view-notes');?>" class="text-dark pt-4">
                 <i class="fa fa-globe" aria-hidden="true"></i> All Notes
             </a>
-        <?php }?>
+
         </li>
 
         <li id="selector">

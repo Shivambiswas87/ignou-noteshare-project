@@ -26,7 +26,7 @@ class Note
 
             $flash = new FlashMessages();
 
-            require BASE_PATH . "/libs/GUMP/gump.class.php";
+            require BASE_PATH . "/libs/gump/gump.class.php";
             $gump = new \GUMP();
             $_POST = $gump->sanitize($_POST);
 
@@ -131,6 +131,7 @@ class Note
                     'question'    => $row['question'],
                     'question_year'    => $row['question_year'],
                     'question_no'    => $row['question_no'],
+                    'file' => $row['file']
 
                 ];
 
@@ -150,4 +151,38 @@ class Note
 
         return mysqli_num_rows($run_query);
     }
+
+    function getNote($noteID){
+
+        global $conn;
+
+        $query = "SELECT * FROM notes WHERE id = $noteID";
+
+        $run_query = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+        $return = [];
+        if (mysqli_num_rows($run_query) > 0) {
+
+            $row = mysqli_fetch_assoc($run_query);
+
+                $return = [
+                    'id' => $row['id'],
+                    'program_code'    => $row['program_code'],
+                    'course_code'    => $row['course_code'],
+                    'semester'    => $row['semester'],
+                    'question'    => $row['question'],
+                    'question_year'    => $row['question_year'],
+                    'question_no'    => $row['question_no'],
+                    'file' => $row['file']
+
+                ];
+
+
+
+
+        }
+        return $return;
+
+    }
+
 }

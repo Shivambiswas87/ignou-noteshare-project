@@ -1,4 +1,10 @@
-    <!--    View Notes -->
+<?php
+$serviceNote = \services\Note::getInstance();
+$notes = $serviceNote->getNotes();
+$countNotes = $serviceNote->countNotes();
+
+?>
+<!--    View Notes -->
     <div class="container-fluid" style="height: 150px">
         <div class="container text-center pt-4">
             <h2 class="display-5">View Notes</h2>
@@ -47,42 +53,51 @@
             <section class="text-center">
                 <h4 class="mb-5"><strong>Latest Upload</strong></h4>
 
-                <?php for($i = 0; $i < 2; $i++){?>
                 <div class="row">
-                    <?php for($j = 0; $j < 2; $j++ ){?>
+
+                <?php
+                $noteNo = 0;
+                foreach($notes as $note){?>
+
                     <div class="col-lg-6 mb-4">
+
                         <div class="card "style="background-color: #fffefa">
-                            <div class="bg-image hover-overlay ripple " data-mdb-ripple-color="light">
-                                <!-- Should show the pdf front page-->
-                                <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" />
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
-                            </div>
+
+
+                            <iframe class="embed-responsive-item"
+                                    src="https://docs.google.com/gview?url=<?php echo \utils\Url::generateLink('uploads/notes/' . $note['file']);?>&embedded=true"
+                                    style="width:100%; height:300px;" frameborder="0">
+
+                            </iframe>
+
+
                             <div class="card-body" >
-                                <h5 class="card-title">Course Code</h5>
+                                <h5 class="card-title">
+                                    Course Code :
+                                    <?php echo $note['course_code'];?></h5>
                                 <p class="card-text">
-                                    Question.
+                                    <?php echo $note['question'];?>
                                 </p>
                                 <div class="row pt-3 align-items-baseline">
                                     <div class="col-3">
-                                <h6>Question No</h6>
+                                        <h6>Question No : <?php echo $note['question_no'];?></h6>
                                     </div>
                                     <div class="col-6">
-                                    <a href="<?php echo \utils\Url::generateLink('read-note');?>" class="btn my-primary-btn text-white">Read</a>
-                                    <a type="button" data-toggle="modal" data-target="#download" data-uid="1" class="btn my-secondary-btn">Download</a>
+                                        <a href="<?php echo \utils\Url::generateLink('read-note', false, ['id' => $note['id']]);?>" class="btn my-primary-btn text-white">Read</a>
+                                        <a type="button" data-toggle="modal" data-target="#download" data-uid="1" class="btn my-secondary-btn">Download</a>
                                     </div>
                                     <div class="col-3">
-                                     <h6>Question Year</h6>
+                                        <h6>Question Year : <?php echo $note['question_year'];?></h6>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <?php }?>
 
-                </div>
                 <?php }?>
+                </div>
+
+
 
             </section>
 
