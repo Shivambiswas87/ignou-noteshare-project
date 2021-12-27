@@ -109,7 +109,7 @@
                                             <span class="input-group-text " id="inputGroupFileAddon01">Upload</span>
                                         </div>
                                         <div class="custom-file ">
-                                            <input type="file" class="custom-file-input " id="inputGroupFile01"
+                                            <input type="file" class="custom-file-input " id="file"
                                                    aria-describedby="inputGroupFileAddon01" name="file">
                                             <label class="custom-file-label my-secondary-btn " for="inputGroupFile01">Choose file</label>
                                         </div>
