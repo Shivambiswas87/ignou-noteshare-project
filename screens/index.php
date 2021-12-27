@@ -22,6 +22,7 @@
     <div class="container">
         <br/>
 
+        <form method="get" action="<?php echo \utils\Url::generateLink('view-notes');?>">
         <div class="row">
             <div class="col-12">
                     <div class="card-body row no-gutters align-items-center">
@@ -29,7 +30,7 @@
                         <!--end of col-->
                         <div class="col">
 
-                            <input class="form-control form-control-lg" type="search" placeholder="Subject's Name Or Subject Code">
+                            <input class="form-control form-control-lg" type="search" placeholder="Subject's Name Or Subject Code" name="s">
                         </div>
                         <!--end of col-->
                         <div class="col-auto ">
@@ -41,6 +42,7 @@
             </div>
                         <!--end of col-->
         </div>
+        </form>
     </div>
     <div class="container ">
     <h2 class="text-center mt-5 mb-5">Be a part of shared learning</h2>

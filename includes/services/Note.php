@@ -141,7 +141,7 @@ VALUES ('$programCode', '$course_code' , '$semester' , '$question', '$question_y
 
     }
 
-    function getNotes($userID = null){
+    function getNotes($userID = null, $searchText = null){
 
         global $conn;
 

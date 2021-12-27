@@ -1,7 +1,12 @@
 <?php
 $serviceNote = \services\Note::getInstance();
-$notes = $serviceNote->getNotes();
+
+
+$searchText = !empty($_GET['s'])?$_GET['s']:null;
+
+$notes = $serviceNote->getNotes(null,$searchText);
 $countNotes = $serviceNote->countNotes();
+
 
 ?>
 <!--    View Notes -->
@@ -23,15 +28,16 @@ $countNotes = $serviceNote->countNotes();
 
     <div class="container">
         <br/>
-
-        <div class="row">
+        <form method="get" action="<?php echo \utils\Url::generateLink('view-notes');?>">
+            <div class="row">
             <div class="col-12">
                 <div class="card-body row no-gutters align-items-center">
 
                     <!--end of col-->
                     <div class="col">
 
-                        <input class="form-control form-control-lg" type="search" placeholder="Search Course Code">
+                        <input class="form-control form-control-lg" type="search" placeholder="Search Course Code"
+                               name="s" value="<?php echo empty($searchText)?'':$searchText;?>">
                     </div>
                     <!--end of col-->
                     <div class="col-auto ">
@@ -43,6 +49,7 @@ $countNotes = $serviceNote->countNotes();
             </div>
             <!--end of col-->
         </div>
+        </form>
     </div>
 
 
