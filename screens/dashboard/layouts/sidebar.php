@@ -6,7 +6,7 @@
         <li class="header">My Account</li>
         <li>
         <?php if(\services\User::getInstance()->isAdmin()){?>
-            <a href="<?php echo \utils\Url::generateLink('all-notes', true);?>" class="text-dark pt-4">
+            <a href="<?php echo \utils\Url::generateLink('all-users-notes', true);?>" class="text-dark pt-4">
                 <i class="fa fa-globe" aria-hidden="true"></i> All Users Notes
             </a>
         <?php }?>

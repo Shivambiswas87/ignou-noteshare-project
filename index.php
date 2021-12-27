@@ -11,11 +11,7 @@ include './includes/connection.php';
 if (!session_id()) session_start();
 
 $path = isset($_GET['path'])?$_GET['path']:'index';
-
-/**
- * Is it dashboard ?
- */
-if(strpos($path, DASHBOARD_URL_SLUG) === 0){
+if(\utils\Url::isDashboard($path)){
 
     if(!\services\User::getInstance()->isLoggedIn()){
         $flash = new \Plasticbrain\FlashMessages\FlashMessages();
@@ -31,7 +27,8 @@ if(strpos($path, DASHBOARD_URL_SLUG) === 0){
 
         case 'my-notes':
         case 'my-downloads':
-        case 'all-notes':
+        case 'all-users-notes':
+        case 'update-note':
 
             \utils\Layout::generateDashboardPage($path);
 
@@ -73,6 +70,7 @@ else{
 
         case 'login':
         case 'signup':
+        case 'download-note':
             \utils\Layout::generatePage($path, [
                 'doShowHeader' => false,
                 'doShowFooter' => false,

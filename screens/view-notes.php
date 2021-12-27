@@ -84,7 +84,8 @@ $countNotes = $serviceNote->countNotes();
                                     </div>
                                     <div class="col-6">
                                         <a href="<?php echo \utils\Url::generateLink('read-note', false, ['id' => $note['id']]);?>" class="btn my-primary-btn text-white">Read</a>
-                                        <a type="button" data-toggle="modal" data-target="#download" data-uid="1" class="btn my-secondary-btn">Download</a>
+                                        <a class="btn my-secondary-btn" target="_blank"
+                                           href="<?php echo \utils\Url::generateLink('download-note', false, ['id' => $note['id']]);?>">Download</a>
                                     </div>
                                     <div class="col-3">
                                         <h6>Question Year : <?php echo $note['question_year'];?></h6>
@@ -120,23 +121,3 @@ $countNotes = $serviceNote->countNotes();
         </div>
     </main>
     <!--Main layout-->
-
-
-<!--    Modal Download -->
-
-    <div id="download" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Download</h4>
-                </div>
-                <div class="modal-body">
-                   <p>Do yo want to download this subject?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" id="up" class="btn my-primary-btn text-white" data-dismiss="modal">Yes, Download</button>
-                    <button type="button" class="btn btn-default my-secondary-btn" data-dismiss="modal">No</button>
-                </div>
-            </div>
-        </div>
-    </div>
