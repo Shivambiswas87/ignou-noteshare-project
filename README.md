@@ -3,7 +3,6 @@
 Steps to run the project :
 
 1. git clone the project
-2. composer init
 3. composer install
 4. cp config.example.php config.php
 5. Change "BASE_URL", "DB_HOST" etc. in the config.php
