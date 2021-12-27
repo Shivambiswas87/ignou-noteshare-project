@@ -52,7 +52,7 @@
                 <div class="col-lg-4 col-md-7 col-sm-9">
                     <div class="single-card card-style-one">
                         <div class="card-image">
-                            <img width="175" height="150" src="<?php echo \utils\Url::getAssetUrl('images/banner_image_1.svg');?>" alt="Image" />
+                            <img width="350" height="250" src="<?php echo \utils\Url::getAssetUrl('images/share-notes.png');?>" alt="Image" />
                         </div>
                         <div class="card-content">
                             <h4 class="card-title">
@@ -69,7 +69,7 @@
                 <div class="col-lg-4 col-md-7 col-sm-9">
                     <div class="single-card card-style-one">
                         <div class="card-image">
-                            <img width="175" height="150" src="<?php echo \utils\Url::getAssetUrl('images/banner_image_2.svg');?>" alt="Image" />
+                            <img width="350" height="250" src="<?php echo \utils\Url::getAssetUrl('images/find-notes.png');?>" alt="Image" />
                         </div>
                         <div class="card-content">
                             <h4 class="card-title">
@@ -86,7 +86,7 @@
                 <div class="col-lg-4 col-md-7 col-sm-9">
                     <div class="single-card card-style-one">
                         <div class="card-image">
-                            <img width="175" height="150" src="<?php echo \utils\Url::getAssetUrl('images/banner_image_1.svg');?>" alt="Image" />
+                            <img width="350" height="250" src="<?php echo \utils\Url::getAssetUrl('images/get-better-grades.png');?>" alt="Image" />
                         </div>
                         <div class="card-content">
                             <h4 class="card-title">

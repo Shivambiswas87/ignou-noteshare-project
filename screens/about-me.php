@@ -13,7 +13,7 @@
                 </a></p>
             </div>
             <div class="col-lg-6 d-none d-lg-block">
-                <img src="<?php echo \utils\Url::getAssetUrl('images/shivam.png');?>" alt="" class="img-fluid"></div>
+                <img src="<?php echo \utils\Url::getAssetUrl('images/shibam.png');?>" alt="" class="img-fluid"></div>
         </div>
 </div>
 
