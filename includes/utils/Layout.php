@@ -20,7 +20,7 @@ class Layout
                     <div class="col-2 my-background-dark">
                         <?php include BASE_PATH . '/screens/dashboard/layouts/sidebar.php';?>
                     </div>
-                    <div class="col-10 my-background vh-100">
+                    <div class="col-10 my-background" style="min-height: 100vh">
 
                         <?php include BASE_PATH . '/screens/' . $filename . '.php';?>
                     </div>
@@ -139,4 +139,7 @@ class Layout
 
     }
 
+    static function show_404_page(){
+        \utils\Layout::generatePage('404');
+    }
 }

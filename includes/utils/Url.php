@@ -61,4 +61,17 @@ class Url
         ob_end_flush();
         die();
     }
+
+    static function isDashboard($path = null){
+
+        if(empty($path))
+            $path = isset($_GET['path'])?$_GET['path']:'index';
+
+        /**
+         * Is it dashboard ?
+         */
+        if(strpos($path, DASHBOARD_URL_SLUG) === 0)
+            return true;
+        return false;
+    }
 }
