@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 27, 2021 at 02:42 PM
+-- Generation Time: Dec 27, 2021 at 03:24 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.24
 
@@ -55,11 +55,12 @@ CREATE TABLE IF NOT EXISTS `notes` (
   `question` varchar(255) NOT NULL,
   `question_year` varchar(255) NOT NULL,
   `question_no` varchar(255) NOT NULL,
-  `userID` int(11) NOT NULL,
+  `userID` int(11) DEFAULT NULL,
   `status` enum('approved','not_approved') NOT NULL DEFAULT 'not_approved',
   `file` varchar(255) NOT NULL,
   `file_uploaded_on` datetime NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `userID` (`userID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -84,6 +85,23 @@ CREATE TABLE IF NOT EXISTS `users` (
   `gender` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `downloads`
+--
+ALTER TABLE `downloads`
+  ADD CONSTRAINT `downloads_ibfk_1` FOREIGN KEY (`noteID`) REFERENCES `notes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `downloads_ibfk_2` FOREIGN KEY (`userID`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `notes`
+--
+ALTER TABLE `notes`
+  ADD CONSTRAINT `notes_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
 
