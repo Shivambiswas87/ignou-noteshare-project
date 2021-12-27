@@ -248,6 +248,11 @@
     /*background: #1a1a1a;*/
     color: #fff;
 }
+@media only screen and (max-width : 1024px ) {
+    .sidebar-container{
+        position: static;
+    }
+}
 
 .content-container {
     padding-top: 20px;
@@ -334,9 +339,20 @@
     padding-left: 220px;
 }
 
+#upload-note{
+    width: 500px;
+}
+@media only screen and (min-width : 320px ) {
+    #upload-note{
+        width: 80%;
+    }
+}
 
-
-
-
-
+.activeSidebarNav{
+    background: #b3b0a9;
+    color: #fff !important;
+}
+.activeSidebarNav:hover{
+    color: #EB5E28 !important;
+}
 

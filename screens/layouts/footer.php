@@ -5,7 +5,7 @@
 <div class="mb-0">
     <div class="py-4 text-center pt-5 pb-5" style="background-color: #e6e3da">
         <p class="lead font-weight-normal" >Upload your notes here</p>
-        <a role="button" class="btn my-primary-btn text-white btn-lg" href="<?php echo \utils\Url::generateLink('upload-note', true);?>" style="width: 500px">
+        <a role="button" id="upload-note" class="btn my-primary-btn text-white btn-lg" href="<?php echo \utils\Url::generateLink('upload-note', true);?>">
             Upload Notes
         </a>
     </div>

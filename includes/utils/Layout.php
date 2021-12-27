@@ -17,10 +17,10 @@ class Layout
         <div class="my-background">
             <div class="container">
                 <div class="row">
-                    <div class="col-2 my-background-dark">
+                    <div class="col-12 col-sm-2 my-background-dark" style="position: relative">
                         <?php include BASE_PATH . '/screens/dashboard/layouts/sidebar.php';?>
                     </div>
-                    <div class="col-10 my-background" style="min-height: 100vh">
+                    <div class="col-12 col-sm-10 my-background" style="min-height: 100vh">
 
                         <?php include BASE_PATH . '/screens/' . $filename . '.php';?>
                     </div>

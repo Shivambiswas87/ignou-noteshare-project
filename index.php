@@ -10,6 +10,7 @@ include './includes/connection.php';
 // Start a Session
 if (!session_id()) session_start();
 
+global $path;
 $path = isset($_GET['path'])?$_GET['path']:'index';
 if(\utils\Url::isDashboard($path)){
 
