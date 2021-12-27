@@ -94,7 +94,7 @@ VALUES ('$programCode', '$course_code' , '$semester' , '$question', '$question_y
                         $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
                         if (mysqli_affected_rows($conn) > 0) {
                             $hasErrors = false;
-                            $flash->success('file uploaded successfully.It will be published after admin approves it');
+                            $flash->success('Thank you for uploading the note.');
                         } else {
                             $flash->error('Error while uploading..try again');
                         }

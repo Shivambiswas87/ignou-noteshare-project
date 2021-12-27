@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 26, 2021 at 06:22 AM
+-- Generation Time: Dec 27, 2021 at 02:42 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.24
 
@@ -22,6 +22,23 @@ SET time_zone = "+00:00";
 --
 -- Database: `note-share`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `downloads`
+--
+
+DROP TABLE IF EXISTS `downloads`;
+CREATE TABLE IF NOT EXISTS `downloads` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userID` int(11) NOT NULL,
+  `noteID` int(11) NOT NULL,
+  `downloadedOn` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `userID` (`userID`),
+  KEY `noteID` (`noteID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
